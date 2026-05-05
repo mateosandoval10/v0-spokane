@@ -6,6 +6,13 @@ function byCategory(id) {
 
 function activationCard(item, expanded = false) {
   const whyList = item.why.map((point) => `<li>${point}</li>`).join("");
+  const measure = {
+    "in-game": "Offer redemptions, QR scans, social response, and repeat attendance after the match.",
+    stadium: "Booth visits, early-arrival lift, participation count, group sales, and sponsor lead capture.",
+    media: "Impressions, content engagement, fan votes, QR scans, and post-match sponsor follow-up.",
+    takehome: "Items distributed, scans from printed materials, repeat use, and community partner outcomes.",
+    citywide: "Registrations, location check-ins, earned media, donations, attendance lift, and sponsor traffic.",
+  }[item.category];
   return `
     <article class="activation-card" data-category="${item.category}">
       <img src="${item.image}" alt="${item.sponsor} ${item.title}">
@@ -13,7 +20,7 @@ function activationCard(item, expanded = false) {
         <div class="card-meta"><span>${item.sponsor}</span><span>${byCategory(item.category).name}</span></div>
         <span class="badge">${item.tag}</span>
         <h3>${item.title}</h3>
-        ${expanded ? `<h4>Why this fits</h4><ul>${whyList}</ul><h4>What we would build</h4><p>${item.build}</p>` : `<p>${item.why[0]}</p>`}
+        ${expanded ? `<h4>Why this fits</h4><ul>${whyList}</ul><h4>What USL Spokane would build</h4><p>${item.build}</p><h4>Measurement lens</h4><p>${measure}</p>` : `<p>${item.why[0]}</p>`}
       </div>
     </article>
   `;
@@ -49,6 +56,16 @@ function initActivations() {
 
 function workCard(item, detailed = true) {
   const highlights = item.highlights.map((point) => `<li>${point}</li>`).join("");
+  const clientUse = {
+    "Sponsor Identification Framework": "Use this as the early category rationale when explaining why the team prioritized healthcare, QSR, coffee, construction, home improvement, and law firm targets.",
+    "Peer Share: Category Mapping": "Use this to show executives that the recommendations were built from league benchmarks, existing inventory, and sponsor-category whitespace.",
+    "Potential Sponsors Deep Dive": "Use this as the backup rationale for specific partner outreach, especially when a sponsor asks why their category makes sense for soccer.",
+    "Prior Sponsorship Activation Strategy": "Use this to connect each recommended idea to precedent from other teams, sports, or community-facing sponsor models.",
+    "Attendance Strength Report": "Use this as the quantitative bridge between sponsor value and attendance behavior, including capacity utilization and growth targets.",
+    "Activation & Outreach Playbook": "Use this as the operating playbook for pilot structure, sponsor fit, outreach language, and what to measure after launch.",
+    "Sponsor Pitch Decks": "Use these as starting points for partner conversations with Chick-fil-A, Dave's, Houston TX Hot Chicken, and Swinerton.",
+    "Final Presentation": "Use this as the executive-facing summary of the recommendation set, final categories, visuals, and next-step deliverables.",
+  }[item.title] || "Use this as supporting evidence for the final recommendation set.";
   return `
     <article class="work-preview-card">
       <img src="${item.preview}" alt="${item.title} preview">
@@ -57,7 +74,7 @@ function workCard(item, detailed = true) {
         <span class="badge alt">${item.owner}</span>
         <h3>${item.title}</h3>
         <p>${item.explanation}</p>
-        ${detailed ? `<h4>What this work contributed</h4><ul>${highlights}</ul><p class="file-note">${item.file}</p>` : ""}
+        ${detailed ? `<h4>What this work contributed</h4><ul>${highlights}</ul><h4>How USL Spokane can use it</h4><p>${clientUse}</p><p class="file-note">${item.file}</p>` : ""}
       </div>
     </article>
   `;
