@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decks | GSCG x USL Spokane</title>
+    <link rel="icon" type="image/png" href="assets/brand/gscg-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-lockup" href="index.html"><img src="assets/brand/gscg-logo.png" alt="GSCG logo"><span></span><strong>USL Spokane</strong></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="activations.html">Activations</a>
+        <a href="work.html">Work</a>
+        <a class="active" href="decks.html">Decks</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero dark-hero">
+        <p class="eyebrow">Presentation Preview</p>
+        <h1>Final & Pitch Decks</h1>
+        <p>Preview the final deck and sponsor-specific pitch materials without turning the site into a download folder.</p>
+      </section>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Sponsor Outreach</p>
+          <h2>Pitch Deck Previews</h2>
+          <p>Four partner narratives built from the strategy work.</p>
+        </div>
+        <div class="pitch-grid" id="pitch-grid"></div>
+      </section>
+      <section class="section deck-section">
+        <div class="section-heading">
+          <p class="eyebrow">Final Presentation</p>
+          <h2>Slide Browser</h2>
+          <p>Use the thumbnails to skim the final 42-slide presentation.</p>
+        </div>
+        <div class="deck-shell">
+          <button class="slide-control" type="button" id="prev-slide">Prev</button>
+          <figure class="slide-stage">
+            <img id="slide-image" src="assets/final-slides/Slide1.jpg" alt="Final presentation slide 1">
+            <figcaption id="slide-caption">Slide 1 of 42</figcaption>
+          </figure>
+          <button class="slide-control" type="button" id="next-slide">Next</button>
+        </div>
+        <div class="slide-rail" id="slide-rail"></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/brand/gscg-logo.png" alt="GSCG"><strong>GSCG</strong><span>Deck Library</span></div>
+      <p>Decks are shown as previews to keep the executive experience simple and focused.</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
