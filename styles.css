@@ -428,22 +428,9 @@ p { margin: 0; color: var(--muted); }
   transition: transform 240ms ease;
 }
 .activation-tile:hover img { transform: scale(1.04); }
-.tile-tag,
 .tile-title {
   position: relative;
   z-index: 1;
-}
-.tile-tag {
-  align-self: start;
-  justify-self: start;
-  margin: 12px;
-  padding: 5px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--ink);
-  font-size: 0.68rem;
-  font-weight: 900;
-  text-transform: uppercase;
 }
 .tile-title {
   align-self: end;
@@ -492,14 +479,30 @@ p { margin: 0; color: var(--muted); }
 .dialog-copy {
   display: grid;
   align-content: center;
-  gap: 14px;
+  gap: 18px;
   padding: clamp(24px, 4vw, 44px);
 }
 .dialog-copy h2 {
   font-size: clamp(2rem, 5vw, 4.2rem);
 }
-.dialog-copy p {
-  font-size: 1.03rem;
+.partner-lockup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.partner-lockup span {
+  display: inline-grid;
+  min-height: 44px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid rgba(21, 21, 21, 0.14);
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff, #f7f4ed);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .dialog-close {
   position: absolute;
@@ -636,30 +639,6 @@ p { margin: 0; color: var(--muted); }
   padding-left: 20px;
   color: var(--muted);
 }
-.week-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-.week-stats article {
-  display: grid;
-  align-content: end;
-  gap: 6px;
-  min-height: 106px;
-  padding: 13px;
-  border-radius: 8px;
-  background: #f7f4ed;
-}
-.week-stats strong {
-  color: var(--red);
-  font-size: 2rem;
-  line-height: 0.9;
-}
-.week-stats span {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-}
 .formula-box {
   display: grid;
   gap: 6px;
@@ -787,7 +766,6 @@ p { margin: 0; color: var(--muted); }
   }
   .brief-metrics, .process-steps, .criteria-grid { grid-template-columns: repeat(2, 1fr); }
   .week-nav { position: static; }
-  .week-stats { grid-template-columns: repeat(3, 1fr); }
   .deck-shell { grid-template-columns: 1fr; }
   .slide-control { width: 100%; }
   .slide-rail { grid-template-columns: repeat(7, 1fr); }
@@ -799,7 +777,7 @@ p { margin: 0; color: var(--muted); }
   .compact-hero { min-height: 640px; }
   .hero-inner { padding-top: 96px; }
   .tabs { position: static; }
-  .page-grid, .split-section, .executive-brief, .portal-grid, .brief-metrics, .insight-grid, .insight-grid.compact, .activation-grid, .activation-gallery, .work-grid, .detailed-grid, .pitch-grid, .people-grid, .work-intro, .strategy-frame, .weekly-shell, .week-detail-card, .week-stats, .process-steps, .criteria-grid, .site-footer {
+  .page-grid, .split-section, .executive-brief, .portal-grid, .brief-metrics, .insight-grid, .insight-grid.compact, .activation-grid, .activation-gallery, .work-grid, .detailed-grid, .pitch-grid, .people-grid, .work-intro, .strategy-frame, .weekly-shell, .week-detail-card, .process-steps, .criteria-grid, .site-footer {
     grid-template-columns: 1fr;
   }
   .category-heading { align-items: start; flex-direction: column; }
