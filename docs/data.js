@@ -716,6 +716,525 @@ window.GSCG = {
       ],
     },
   ],
+  weeklyContributions: [
+    {
+      week: "Week 1",
+      title: "Market Baseline and Sponsorship Standards",
+      summary: "The first week established what sponsor value should mean for USL Spokane: attendance strength, sponsor inventory, league norms, and stadium inventory.",
+      people: [
+        {
+          name: "Mateo Sandoval",
+          initials: "MS",
+          role: "Consultant",
+          summary: "Mateo built the ASI framework to show which USL League One teams were performing best relative to venue size and local demand.",
+          artifacts: [
+            {
+              title: "Attendance Strength Index",
+              file: "USL_Attendance_Strength_Report_Enhanced.pdf",
+              type: "Data report",
+              preview: "assets/work-previews/USL_Attendance_Strength_Report_Enhanced.pdf.png",
+              achievement: "Created the quantitative baseline for evaluating attendance strength beyond raw attendance.",
+              points: [
+                "Combined capacity fill, attendance rank, and capacity efficiency into one sponsor-facing index.",
+                "Used Spokane's 35.2% fill rate to frame activations as attendance and repeat-behavior tools.",
+              ],
+              metrics: ["ASI formula", "Spokane: 35.2% filled"],
+            },
+          ],
+        },
+        {
+          name: "Nicole Pumpalov",
+          initials: "NP",
+          role: "Consultant",
+          summary: "Nicole researched USL sponsorship norms, tiered packages, broadcast exposure, and brand-safe sponsor categories.",
+          artifacts: [
+            {
+              title: "USL Sponsorship Norms and Brand Safety",
+              file: "GSCG W1 (1).docx",
+              type: "Research notes",
+              preview: "assets/nicole-work-previews/GSCG W1 (1).docx.png",
+              achievement: "Defined why sponsor fit had to account for local values, national streaming exposure, and package range.",
+              points: [
+                "Flagged tiered packages as a way to include both smaller Spokane businesses and larger regional brands.",
+                "Connected Peacock, SWX, and KHQ visibility to the need for family-safe sponsor categories.",
+              ],
+              metrics: ["Tiered packages", "Peacock / SWX / KHQ"],
+            },
+          ],
+        },
+        {
+          name: "Emily Staley",
+          initials: "ES",
+          role: "Consultant",
+          summary: "Emily mapped USL Spokane's existing partner ecosystem to identify category saturation and whitespace.",
+          artifacts: [
+            {
+              title: "Partner Inventory and Category Gaps",
+              file: "GSCG Velocity- Emily (1).docx",
+              type: "Research notes",
+              preview: "assets/emily-work-previews/GSCG Velocity- Emily (1).docx.png",
+              achievement: "Organized current partners by tier, team, and category to show where new sponsor opportunities were most credible.",
+              points: [
+                "Showed healthcare was already crowded in the existing partner mix.",
+                "Identified finance, telecom, education, automotive, and home improvement as whitespace areas.",
+              ],
+              metrics: ["Healthcare saturated", "Telecom absent"],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady researched common USL sponsorship inventory and the types of brands that usually benefit from live sports exposure.",
+          artifacts: [
+            {
+              title: "USL Sponsorship Norms",
+              file: "Week 1 Research .docx",
+              type: "Research notes",
+              preview: "assets/brady-work-previews/Week 1 Research .docx.png",
+              achievement: "Mapped common stadium assets and sponsor categories before the team narrowed into Spokane-specific ideas.",
+              points: [
+                "Covered scoreboard, concourse, digital, signage, parking, and in-game inventory.",
+                "Flagged food, beverage, travel, healthcare, telecom, and fitness as common stadium categories.",
+              ],
+              metrics: ["Scoreboard", "Concourse", "In-game events"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 2",
+      title: "Sponsor Mapping and Evaluation Criteria",
+      summary: "Week 2 turned the early research into a more disciplined sponsor-screening process: which categories fit Spokane, which brands were safe, and which audiences each sponsor could reach.",
+      people: [
+        {
+          name: "Mateo Sandoval",
+          initials: "MS",
+          role: "Consultant",
+          summary: "Mateo organized the sponsor search into practical categories that could become real activations rather than a loose list of brands.",
+          artifacts: [
+            {
+              title: "Sponsor Identification Framework",
+              file: "Spokane_Week2_Work (1).docx",
+              type: "Research notes",
+              preview: "assets/work-previews/Spokane_Week2_Work (1).docx.png",
+              achievement: "Defined the priority sponsor categories and early activation paths for USL Spokane.",
+              points: [
+                "Prioritized healthcare, QSR, coffee, construction, home improvement, and law firms.",
+                "Connected each category to a fan behavior or community use case.",
+              ],
+              metrics: ["QSR", "Coffee", "Home improvement"],
+            },
+          ],
+        },
+        {
+          name: "Nicole Pumpalov",
+          initials: "NP",
+          role: "Consultant",
+          summary: "Nicole built a standardized evaluation lens for partner fit, including values, audience, geography, reputation, and activation potential.",
+          artifacts: [
+            {
+              title: "Evaluation Criteria and Activation Fit",
+              file: "GSCG W2 (1).docx",
+              type: "Research notes",
+              preview: "assets/nicole-work-previews/GSCG W2 (1).docx.png",
+              achievement: "Created a sponsor-screening checklist that made brand fit more consistent and defensible.",
+              points: [
+                "Used USL Spokane values such as community, inclusion, ambition, local roots, and family friendliness.",
+                "Captured early activation directions like crossbar challenges, raffles, law-firm clinics, and Spokane Humane events.",
+              ],
+              metrics: ["Values fit", "Audience alignment", "Activation potential"],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady built a category spreadsheet across USL clubs so the team could compare Spokane against broader league patterns.",
+          artifacts: [
+            {
+              title: "USL Sponsor Category Database",
+              file: "Sponsors.xlsx",
+              type: "Spreadsheet",
+              preview: "assets/brady-work-previews/Sponsors.xlsx.png",
+              achievement: "Tracked sponsor categories across clubs to show which categories were common and which could be differentiated.",
+              points: [
+                "Included categories such as healthcare, service, restaurant, legal, finance, beverage, entertainment, and sporting.",
+                "Created a comparison base for local, regional, and national sponsor targeting.",
+              ],
+              metrics: ["Service: 24", "Healthcare: 24"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 3",
+      title: "Sponsor Benchmarks and Target Logic",
+      summary: "Week 3 compared sponsor precedent across sports, local relevance, and likely audience behavior so the team could decide which brands were worth moving forward.",
+      people: [
+        {
+          name: "Mateo Sandoval",
+          initials: "MS",
+          role: "Consultant",
+          summary: "Mateo compared potential sponsors by sports precedent, audience fit, and whether each brand could support a fan-facing activation.",
+          artifacts: [
+            {
+              title: "Potential Sponsor Deep Dives",
+              file: "Week 4 (1) (1).docx",
+              type: "Research notes",
+              preview: "assets/work-previews/Week 4 (1) (1).docx.png",
+              achievement: "Moved potential partners from name recognition into activation credibility.",
+              points: [
+                "Evaluated Raising Cane's, Spokane Humane Society, Liquid I.V., and Thomas Hammer.",
+                "Separated brands that could advertise from brands that could create repeatable fan actions.",
+              ],
+              metrics: ["Sports precedent", "Fan action"],
+            },
+          ],
+        },
+        {
+          name: "Emily Staley",
+          initials: "ES",
+          role: "Consultant",
+          summary: "Emily sharpened the audience-fit lens around families, youth soccer households, young adults, and regional Spokane market presence.",
+          artifacts: [
+            {
+              title: "Audience Fit and Brand Evaluation",
+              file: "Week 3- Velocity.docx",
+              type: "Research notes",
+              preview: "assets/emily-work-previews/Week 3- Velocity.docx.png",
+              achievement: "Clarified who Velocity sponsorships should reach and how audience fit should be judged.",
+              points: [
+                "Defined a core audience of young adults, families, youth soccer households, casual fans, and community supporters.",
+                "Used Richmond Kickers as a mature League One benchmark for food and beverage sponsor thinking.",
+              ],
+              metrics: ["18-44 audience", "Youth soccer families"],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady sorted sponsor targets into local, regional, and national opportunities based on audience fit and sponsorship precedent.",
+          artifacts: [
+            {
+              title: "Sponsor Target Pitches",
+              file: "Sponsorship pitches.docx",
+              type: "Prospecting notes",
+              preview: "assets/brady-work-previews/Sponsorship pitches.docx.png",
+              achievement: "Created a practical prospect list for community, regional, and national partner conversations.",
+              points: [
+                "Local targets included Spokane Humane Society, Spokane Soccer Academy, and Habitat for Humanity Spokane.",
+                "Regional and national targets included outdoor, insurance, family entertainment, hot chicken, and beverage brands.",
+              ],
+              metrics: ["Local", "Regional", "National"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 4",
+      title: "Activation Concept Expansion",
+      summary: "Week 4 translated sponsor benchmarks into actual concepts, including the first clear versions of several final recommendations and additional activation ideas.",
+      people: [
+        {
+          name: "Mateo Sandoval",
+          initials: "MS",
+          role: "Consultant",
+          summary: "Mateo converted sponsor precedent into Spokane-ready ideas for Chick-fil-A, Dave's Hot Chicken, Houston TX Hot Chicken, and Swinerton.",
+          artifacts: [
+            {
+              title: "Activation Translation",
+              file: "GSCG Work (1).docx",
+              type: "Strategy notes",
+              preview: "assets/work-previews/GSCG Work (1).docx.png",
+              achievement: "Built the first strong version of the activation logic that later became the final recommendation categories.",
+              points: [
+                "Connected Chick-fil-A to set-piece rewards and family/community programming.",
+                "Positioned Dave's, Houston, and Swinerton around supporter energy, giveback, workforce, and civic-building ideas.",
+              ],
+              metrics: ["Chick-fil-A", "Dave's", "Swinerton"],
+            },
+          ],
+        },
+        {
+          name: "Nicole Pumpalov",
+          initials: "NP",
+          role: "Consultant",
+          summary: "Nicole expanded the idea pipeline by attaching Red Bull, Alaska, NERF, Spokane Humane, River's Wish, and Nobull to clear fan behaviors.",
+          artifacts: [
+            {
+              title: "Sponsor Concept Expansion",
+              file: "GSCG W4 (1) (1).pdf",
+              type: "Concept notes",
+              preview: "assets/nicole-work-previews/GSCG W4 (1) (1).pdf.png",
+              achievement: "Turned additional sponsor targets into usable activation mechanics instead of generic prospects.",
+              points: [
+                "Outlined Red Bull sampling, Earn Your Wings social posts, and Alaska away-match rewards.",
+                "Connected NERF, animal-welfare partners, and Nobull to mini-arenas, adoption popups, fundraising, and fitness.",
+              ],
+              metrics: ["Red Bull", "Alaska", "NERF"],
+            },
+          ],
+        },
+        {
+          name: "Emily Staley",
+          initials: "ES",
+          role: "Consultant",
+          summary: "Emily pushed Zephyr prospecting toward scalable partners with stronger women's sports fit and larger budget potential.",
+          artifacts: [
+            {
+              title: "Zephyr Sponsor Prospect Rationale",
+              file: "Week 4- Zephyr (2).pdf",
+              type: "PDF notes",
+              preview: "assets/emily-work-previews/Week 4- Zephyr (2).pdf.png",
+              achievement: "Explained why BODYARMOR, Schweitzer, and Chick-fil-A could fit Zephyr's audience and growth story.",
+              points: [
+                "Connected BODYARMOR to soccer, emerging leagues, young athletes, and women's sports.",
+                "Positioned Schweitzer around active lifestyles, families, weekend travel, and regional marketing reach.",
+              ],
+              metrics: ["BODYARMOR", "Schweitzer", "Chick-fil-A"],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady benchmarked legal-service and animal-welfare sponsorship ideas, which later became several additional concepts.",
+          artifacts: [
+            {
+              title: "Legal and Humane Society Benchmarks",
+              file: "Post Midpoint Brainstorm.docx",
+              type: "Benchmark notes",
+              preview: "assets/brady-work-previews/Post Midpoint Brainstorm.docx.png",
+              achievement: "Identified credible legal and animal-welfare activation examples to carry into pitch templates.",
+              points: [
+                "Legal examples included yellow card sponsorships, red card integrations, highlights, and community clinics.",
+                "Animal-welfare examples included pet adoption nights, ticket donations, dog-friendly games, and trading cards.",
+              ],
+              metrics: ["Yellow cards", "Pups at the Pitch", "Ticket donations"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 5",
+      title: "Benchmarking, Metrics, and Channel Logic",
+      summary: "Week 5 made the work more analytical by comparing peer sponsorship models and clarifying which sponsor channels create the most value.",
+      people: [
+        {
+          name: "Emily Staley",
+          initials: "ES",
+          role: "Consultant",
+          summary: "Emily compared men's and women's club sponsorship models and translated that research into channel priorities for Velocity and Zephyr.",
+          artifacts: [
+            {
+              title: "Peer Sponsorship Model Benchmarking",
+              file: "week 5 gscg.docx",
+              type: "Benchmark notes",
+              preview: "assets/emily-work-previews/week 5 gscg.docx.png",
+              achievement: "Separated visibility-driven sponsorship models from engagement-driven models.",
+              points: [
+                "Used Louisville, Sacramento, Phoenix, Brooklyn, Dallas, and Tampa Bay as comparison points.",
+                "Concluded Velocity should expand sponsored social content while Zephyr should lean into community, identity, wellness, and engagement.",
+              ],
+              metrics: ["Velocity social: 12.5%", "Zephyr social: 21.7%"],
+            },
+            {
+              title: "Sponsorship ROI and Channel Logic",
+              file: "GSCG week 5 real.docx",
+              type: "ROI notes",
+              preview: "assets/emily-work-previews/GSCG week 5 real.docx.png",
+              achievement: "Explained why replay, jersey, social, and emotional fan moments carry high sponsor value.",
+              points: [
+                "Highlighted constant visibility, emotional connection, and digital distribution as the main ROI drivers.",
+                "Applied the logic to replay, window, hydration, home improvement, and elevation-style concepts.",
+              ],
+              metrics: ["TV: 68%", "Social: 65%", "73% purchase intent"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 6",
+      title: "Outreach Packages and Sponsor Buildouts",
+      summary: "Week 6 shifted from research into pitchable packages, with each concept getting a clearer sponsor role, fan action, and launch path.",
+      people: [
+        {
+          name: "Nicole Pumpalov",
+          initials: "NP",
+          role: "Consultant",
+          summary: "Nicole built out late-stage mechanics for Thomas Hammer, LMNT, NERF, and Alaska/Hawaiian while refining why each sponsor fit the club.",
+          artifacts: [
+            {
+              title: "Thomas Hammer, LMNT, NERF, and Alaska Mechanics",
+              file: "GSCG2 (1) (1).pdf",
+              type: "Activation buildout",
+              preview: "assets/nicole-work-previews/GSCG2 (1) (1).pdf.png",
+              achievement: "Converted late-stage sponsor targets into practical stadium, social, and community mechanics.",
+              points: [
+                "Outlined Thomas Hammer carts, matchday drinks, Hammer Time, LMNT hydration, NERF clinics, Golden Bolt, and Alaska seat upgrades.",
+                "Added family ticket packages, player day-in-the-life content, and travel-reward ideas.",
+              ],
+              metrics: ["Hammer Time", "Hydration station", "Golden Bolt"],
+            },
+            {
+              title: "Sponsor Strengths and Pitch Paths",
+              file: "Thomas Hammer (1).pdf",
+              type: "Pitch notes",
+              preview: "assets/work-previews/sponsor-strengths-pitch-paths.svg",
+              achievement: "Refined the sponsor rationale for Thomas Hammer, NERF, Alaska/Hawaiian, and LMNT without publishing private contact details.",
+              points: [
+                "Positioned Thomas Hammer around local community alignment and youth-program fundraising.",
+                "Positioned NERF, Alaska/Hawaiian, and LMNT around family engagement, travel credibility, and performance/lifestyle content.",
+              ],
+              metrics: ["Community alignment", "Youth appeal", "Travel rewards"],
+            },
+          ],
+        },
+        {
+          name: "Emily Staley",
+          initials: "ES",
+          role: "Consultant",
+          summary: "Emily built outreach-ready sponsor packages and decision-maker logic for window, Schweitzer, Liquid I.V., and home-improvement prospects.",
+          artifacts: [
+            {
+              title: "Outreach Packages and Decision-Maker Research",
+              file: "GSCG week 6.docx",
+              type: "Outreach notes",
+              preview: "assets/emily-work-previews/GSCG week 6.docx.png",
+              achievement: "Turned sponsor concepts into cleaner pitch packages and practical decision-maker pathways.",
+              points: [
+                "Built window sponsor layers around replay, digital amplification, fan voting, and premium seating.",
+                "Repositioned Liquid I.V. toward lifestyle, recovery, and player routine content.",
+              ],
+              metrics: ["VPI / Marlin", "Schweitzer", "Liquid I.V."],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady turned nonprofit and legal-service concepts into formal pitch templates with matchday execution details.",
+          artifacts: [
+            {
+              title: "Spokane Humane Society Partnership",
+              file: "partnership template Humane Society.docx",
+              type: "Pitch template",
+              preview: "assets/brady-work-previews/partnership template Humane Society.docx.png",
+              achievement: "Built the Humane Society concept into a concrete matchday partnership template.",
+              points: [
+                "Defined SHS Trading Cards, plushies, a dedicated SHS night, and an animal captain idea.",
+                "Recommended ticket and merchandise revenue shares to support SHS.",
+              ],
+              metrics: ["Trading cards", "Plushies", "Animal captain"],
+            },
+            {
+              title: "Lukins & Annis Partnership",
+              file: "partnership template LA.docx",
+              type: "Pitch template",
+              preview: "assets/brady-work-previews/partnership template LA.docx.png",
+              achievement: "Built a legal-service pitch around rules education and professional community positioning.",
+              points: [
+                "Connected Lukins & Annis to Laws of the Game materials for new fans.",
+                "Added Yellow/Red Card Replay and Women in the Workforce Night as expansion concepts.",
+              ],
+              metrics: ["Rules guide", "Replay graphic", "Workforce night"],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      week: "Week 7-8",
+      title: "Pitch Packaging and Final Delivery",
+      summary: "The final phase packaged the strongest ideas into client-facing pitch materials, final visuals, and a recommendation system executives could scan quickly.",
+      people: [
+        {
+          name: "Nicole Pumpalov",
+          initials: "NP",
+          role: "Consultant",
+          summary: "Nicole turned late-stage Alaska, Thomas Hammer, NERF, and LMNT concepts into visual presentation form with supporting rationale.",
+          artifacts: [
+            {
+              title: "Activation Visuals",
+              file: "Presentation 6 (1).pptx",
+              type: "Slide deck",
+              preview: "assets/nicole-work-previews/Presentation 6 (1).pptx.png",
+              achievement: "Packaged the late-stage concepts into visuals and backed several ideas with attendance and promotion logic.",
+              points: [
+                "Included Alaska travel bundles, Wing It crossbar challenge, Thomas Hammer custom roasts, stoppage-time BOGO, NERF halftime, and LMNT Recharge Moment.",
+                "Used promotion rationale such as MiLB attendance lift and non-price activation attendance lift.",
+              ],
+              metrics: ["14-28% lift", "35.5% lift", "#StaySaltySpokane"],
+            },
+          ],
+        },
+        {
+          name: "Brady Hippler",
+          initials: "BH",
+          role: "Consultant",
+          summary: "Brady packaged Lukins & Annis and Spokane Humane Society ideas into deck and graphics formats for later sponsor conversations.",
+          artifacts: [
+            {
+              title: "Pitch Deck and Graphics Package",
+              file: "Pitch Decks.pptx / Graphics.pdf",
+              type: "Pitch package",
+              preview: "assets/brady-work-previews/Pitch Decks.pptx.png",
+              achievement: "Moved SHS and Lukins & Annis concepts from notes into visual pitch assets.",
+              points: [
+                "Included ticket donations, animal captain, on-site adoption, trading cards, plushie sales, and yellow/red card replay.",
+                "Preserved usable ideas as additional concepts rather than forcing them into the final recommendation set.",
+              ],
+              metrics: ["Ticket donations", "On-site adoption", "Yellow/red replay"],
+            },
+          ],
+        },
+        {
+          name: "GSCG Team",
+          initials: "GS",
+          role: "Team Output",
+          summary: "The team converted the research, sponsor logic, and activation visuals into final client-facing materials.",
+          artifacts: [
+            {
+              title: "Sponsor Pitch Decks",
+              file: "Chick-fil-A, Dave's, Houston, and Swinerton decks",
+              type: "Pitch decks",
+              preview: "assets/pitch-decks/USL_Spokane_x_Chick-fil-A_TemplateDeck.pdf.png",
+              achievement: "Created partner-specific pitch decks with fit, lead activation, sponsor value, club value, and next steps.",
+              points: [
+                "Positioned Chick-fil-A, Dave's, Houston, and Swinerton around their clearest fan or community role.",
+                "Turned the research into materials USL Spokane could use in sponsor conversations.",
+              ],
+              metrics: ["4 pitch decks", "Final sponsor roles"],
+            },
+            {
+              title: "Final Presentation",
+              file: "GSCG x USL Final Presentation",
+              type: "Client deck",
+              preview: "assets/final-slides/Slide9.jpg",
+              achievement: "Organized the final recommendations into five activation categories with featured and additional ideas separated.",
+              points: [
+                "Presented final recommendations, additional activations, supporting data, and pitch-ready logic.",
+                "Created the foundation for this landing page as a living deliverable archive.",
+              ],
+              metrics: ["5 categories", "37 concepts"],
+            },
+          ],
+        },
+      ],
+    },
+  ],
   consultantWork: [
     {
       name: "Mateo Sandoval",
@@ -930,7 +1449,7 @@ window.GSCG = {
           week: "Pitch Refinement",
           title: "Sponsor Strengths and Pitch Paths",
           file: "Thomas Hammer.pdf",
-          preview: "assets/emily-work-previews/Thomas Hammer.pdf.png",
+          preview: "assets/work-previews/sponsor-strengths-pitch-paths.svg",
           achievement: "Emily refined why each late-stage target deserved a pitch while keeping private contact details out of the published deliverable.",
           points: [
             "Thomas Hammer was positioned around Spokane community alignment, visibility, fundraising for youth programs, and positive local association.",
@@ -1087,10 +1606,10 @@ window.GSCG = {
     },
   ],
   consultants: [
-    { name: "Nate Galit", initials: "NG", role: "Project Manager", status: "Project manager section coming soon" },
+    { name: "Nate Galit", initials: "NG", role: "Project Manager", status: "Project management" },
     { name: "Emily Staley", initials: "ES", role: "Consultant", status: "Detailed section added" },
     { name: "Mateo Sandoval", initials: "MS", role: "Consultant", status: "Detailed section added" },
-    { name: "Nicole Pumpalov", initials: "NP", role: "Consultant", status: "Individual work section coming soon" },
+    { name: "Nicole Pumpalov", initials: "NP", role: "Consultant", status: "Work grouped by week" },
     { name: "Brady Hippler", initials: "BH", role: "Consultant", status: "Detailed section added" },
   ],
   pitchDecks: [

@@ -1,4 +1,4 @@
-const { categories, activations, weeklyDeepDives, workItems, consultantWork, consultants, pitchDecks } = window.GSCG;
+const { categories, activations, weeklyDeepDives, workItems, weeklyContributions, consultantWork, consultants, pitchDecks } = window.GSCG;
 
 function byCategory(id) {
   return categories.find((category) => category.id === id);
@@ -308,11 +308,58 @@ function consultantProfile(profile) {
   `;
 }
 
+function contributionArtifact(item) {
+  const points = item.points?.map((point) => `<li>${point}</li>`).join("") || "";
+  const metrics = item.metrics?.map((metric) => `<span>${metric}</span>`).join("") || "";
+  return `
+    <article class="contribution-artifact-card">
+      <img src="${item.preview}" alt="${item.title} preview">
+      <div>
+        <div class="card-meta"><span>${item.file}</span><span>${item.type}</span></div>
+        <h4>${item.title}</h4>
+        <p>${item.achievement}</p>
+        ${points ? `<ul>${points}</ul>` : ""}
+        ${metrics ? `<div class="evidence-row">${metrics}</div>` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function weeklyContributionGroup(group) {
+  const people = group.people.map((person) => `
+    <article class="person-contribution-card">
+      <div class="person-contribution-head">
+        <span class="avatar">${person.initials}</span>
+        <div>
+          <p class="eyebrow">${person.role}</p>
+          <h3>${person.name}</h3>
+          <p>${person.summary}</p>
+        </div>
+      </div>
+      <div class="contribution-artifact-grid">
+        ${person.artifacts.map((item) => contributionArtifact(item)).join("")}
+      </div>
+    </article>
+  `).join("");
+  return `
+    <article class="week-contribution-group">
+      <div class="week-contribution-head">
+        <div>
+          <p class="eyebrow">${group.week}</p>
+          <h2>${group.title}</h2>
+          <p>${group.summary}</p>
+        </div>
+        <span>${group.people.length} contributors</span>
+      </div>
+      <div class="person-contribution-list">${people}</div>
+    </article>
+  `;
+}
+
 function initWork() {
   const weekNav = document.querySelector("#week-nav");
   const weekDetail = document.querySelector("#week-detail");
-  const library = document.querySelector("#work-library");
-  const people = document.querySelector("#consultant-grid");
+  const contributions = document.querySelector("#weekly-contributions");
   if (weekNav && weekDetail && weeklyDeepDives) {
     function setWeek(index) {
       weekNav.querySelectorAll("button").forEach((button) => {
@@ -331,20 +378,8 @@ function initWork() {
     });
     setWeek(0);
   }
-  if (library) {
-    library.innerHTML = workItems.map((item) => workCard(item, true)).join("");
-  }
-  if (people) {
-    const detailedProfiles = consultantWork?.map((profile) => consultantProfile(profile)).join("") || "";
-    const comingSoon = consultants.filter((person) => !consultantWork?.some((profile) => profile.name === person.name)).map((person) => `
-      <article class="person-card">
-        <span class="avatar">${person.initials}</span>
-        <h3>${person.name}</h3>
-        <p><strong>${person.role}</strong></p>
-        <p>${person.status}</p>
-      </article>
-    `).join("");
-    people.innerHTML = `${detailedProfiles}${comingSoon ? `<div class="people-grid compact-people">${comingSoon}</div>` : ""}`;
+  if (contributions && weeklyContributions) {
+    contributions.innerHTML = weeklyContributions.map((group) => weeklyContributionGroup(group)).join("");
   }
 }
 

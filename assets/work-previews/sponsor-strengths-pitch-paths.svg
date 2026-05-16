@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Sponsor Strengths and Pitch Paths</title>
+  <desc id="desc">Redacted preview card for late-stage sponsor pitch notes.</desc>
+  <rect width="900" height="1100" fill="#f7f4ed"/>
+  <rect x="52" y="52" width="796" height="996" rx="24" fill="#ffffff" stroke="#ded8ca" stroke-width="3"/>
+  <rect x="52" y="52" width="796" height="210" rx="24" fill="#151515"/>
+  <text x="92" y="126" fill="#ff5965" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4">PITCH REFINEMENT</text>
+  <text x="92" y="196" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="900">Sponsor Strengths</text>
+  <text x="92" y="244" fill="#ffffff" fill-opacity="0.74" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Thomas Hammer / NERF / Alaska-Hawaiian / LMNT</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="92" y="342" fill="#151515" font-size="32" font-weight="900">What the work clarified</text>
+    <g fill="#59636e" font-size="26" font-weight="650">
+      <text x="118" y="410">Community alignment and local credibility</text>
+      <text x="118" y="476">Family and youth engagement potential</text>
+      <text x="118" y="542">Travel rewards and away-match storytelling</text>
+      <text x="118" y="608">Performance, hydration, and lifestyle content</text>
+    </g>
+    <g fill="#ce1020">
+      <circle cx="92" cy="400" r="9"/>
+      <circle cx="92" cy="466" r="9"/>
+      <circle cx="92" cy="532" r="9"/>
+      <circle cx="92" cy="598" r="9"/>
+    </g>
+    <rect x="92" y="700" width="716" height="2" fill="#ded8ca"/>
+    <text x="92" y="770" fill="#006f8d" font-size="28" font-weight="900">PRIVATE CONTACT DETAILS REDACTED</text>
+    <text x="92" y="820" fill="#59636e" font-size="24" font-weight="650">Published page shows strategy rationale only.</text>
+    <text x="92" y="910" fill="#151515" font-size="34" font-weight="900">USL Spokane x GSCG</text>
+    <text x="92" y="952" fill="#59636e" font-size="24" font-weight="700">Late-stage sponsor fit notes</text>
+  </g>
+</svg>
