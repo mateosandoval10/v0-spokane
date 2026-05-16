@@ -573,12 +573,12 @@ window.GSCG = {
     },
     {
       week: "Week 6-7",
-      shortTitle: "Pitch Decks",
-      title: "Partner-Specific Pitch Packaging",
+      shortTitle: "Partner Materials",
+      title: "Partner-Specific Recommendation Packaging",
       owner: "GSCG Team",
       preview: "assets/pitch-decks/USL_Spokane_x_Chick-fil-A_TemplateDeck.pdf.png",
-      artifact: "Sponsor Pitch Decks",
-      summary: "Weeks 6 and 7 converted the strategy into sponsor-specific pitch decks with a clear partner role, lead activation, sponsor value, club value, and next step.",
+      artifact: "Sponsor Outreach Materials",
+      summary: "Weeks 6 and 7 converted the strategy into sponsor-specific materials with a clear partner role, lead activation, sponsor value, club value, and next step.",
       insights: [
         "Chick-fil-A was positioned around family, community, and a stadium-wide reward platform.",
         "Dave's Hot Chicken was positioned around Velocity supporter culture and high-energy media moments.",
@@ -1184,14 +1184,14 @@ window.GSCG = {
           name: "Brady Hippler",
           initials: "BH",
           role: "Consultant",
-          summary: "Brady packaged Lukins & Annis and Spokane Humane Society ideas into deck and graphics formats for later sponsor conversations.",
+          summary: "The Lukins & Annis and Spokane Humane Society ideas were packaged into visual formats for later sponsor conversations.",
           artifacts: [
             {
-              title: "Pitch Deck and Graphics Package",
-              file: "Pitch Decks.pptx / Graphics.pdf",
-              type: "Pitch package",
+              title: "Partnership Graphics Package",
+              file: "Sponsor concept graphics package",
+              type: "Visual package",
               preview: "assets/brady-work-previews/Pitch Decks.pptx.png",
-              achievement: "Moved SHS and Lukins & Annis concepts from notes into visual pitch assets.",
+              achievement: "Moved SHS and Lukins & Annis concepts from notes into visual sponsor materials.",
               points: [
                 "Included ticket donations, animal captain, on-site adoption, trading cards, plushie sales, and yellow/red card replay.",
                 "Preserved usable ideas as additional concepts rather than forcing them into the final recommendation set.",
@@ -1207,16 +1207,16 @@ window.GSCG = {
           summary: "The team converted the research, sponsor logic, and activation visuals into final client-facing materials.",
           artifacts: [
             {
-              title: "Sponsor Pitch Decks",
-              file: "Chick-fil-A, Dave's, Houston, and Swinerton decks",
-              type: "Pitch decks",
+              title: "Sponsor Outreach Materials",
+              file: "Partner-specific sponsor packages",
+              type: "Sponsor materials",
               preview: "assets/pitch-decks/USL_Spokane_x_Chick-fil-A_TemplateDeck.pdf.png",
-              achievement: "Created partner-specific pitch decks with fit, lead activation, sponsor value, club value, and next steps.",
+              achievement: "Created partner-specific materials with fit, lead activation, sponsor value, club value, and next steps.",
               points: [
                 "Positioned Chick-fil-A, Dave's, Houston, and Swinerton around their clearest fan or community role.",
                 "Turned the research into materials USL Spokane could use in sponsor conversations.",
               ],
-              metrics: ["4 pitch decks", "Final sponsor roles"],
+              metrics: ["4 sponsor packages", "Final sponsor roles"],
             },
             {
               title: "Final Presentation",

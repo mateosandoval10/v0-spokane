@@ -1,4 +1,4 @@
-const { categories, activations, weeklyDeepDives, workItems, weeklyContributions, consultantWork, consultants, pitchDecks } = window.GSCG;
+const { categories, activations, weeklyDeepDives, workItems, weeklyContributions, consultantWork, consultants } = window.GSCG;
 
 function byCategory(id) {
   return categories.find((category) => category.id === id);
@@ -216,7 +216,7 @@ function weeklyDetail(item) {
   return `
     <article class="week-detail-card">
       <div class="week-copy">
-        <p class="eyebrow">${item.week} / ${item.owner}</p>
+        <p class="eyebrow">${item.week} / ${item.artifact}</p>
         <h2>${item.title}</h2>
         <p>${item.summary}</p>
         <h4>What the work achieved</h4>
@@ -326,21 +326,7 @@ function contributionArtifact(item) {
 }
 
 function weeklyContributionGroup(group) {
-  const people = group.people.map((person) => `
-    <article class="person-contribution-card">
-      <div class="person-contribution-head">
-        <span class="avatar">${person.initials}</span>
-        <div>
-          <p class="eyebrow">${person.role}</p>
-          <h3>${person.name}</h3>
-          <p>${person.summary}</p>
-        </div>
-      </div>
-      <div class="contribution-artifact-grid">
-        ${person.artifacts.map((item) => contributionArtifact(item)).join("")}
-      </div>
-    </article>
-  `).join("");
+  const artifacts = group.people.flatMap((person) => person.artifacts);
   return `
     <article class="week-contribution-group">
       <div class="week-contribution-head">
@@ -349,9 +335,11 @@ function weeklyContributionGroup(group) {
           <h2>${group.title}</h2>
           <p>${group.summary}</p>
         </div>
-        <span>${group.people.length} contributors</span>
+        <span>${artifacts.length} work products</span>
       </div>
-      <div class="person-contribution-list">${people}</div>
+      <div class="contribution-artifact-grid phase-artifact-grid">
+        ${artifacts.map((item) => contributionArtifact(item)).join("")}
+      </div>
     </article>
   `;
 }
@@ -384,22 +372,9 @@ function initWork() {
 }
 
 function initDecks() {
-  const pitch = document.querySelector("#pitch-grid");
   const rail = document.querySelector("#slide-rail");
   const image = document.querySelector("#slide-image");
   const caption = document.querySelector("#slide-caption");
-  if (pitch) {
-    pitch.innerHTML = pitchDecks.map((deck) => `
-      <article class="pitch-card">
-        <img src="${deck.image}" alt="${deck.sponsor} pitch deck preview">
-        <div class="card-body">
-          <span class="badge gold">${deck.fit}</span>
-          <h3>${deck.sponsor}</h3>
-          <p>${deck.lead}</p>
-        </div>
-      </article>
-    `).join("");
-  }
   if (!rail || !image || !caption) return;
   const slideCount = 42;
   let slideIndex = 1;
