@@ -4,6 +4,10 @@ function byCategory(id) {
   return categories.find((category) => category.id === id);
 }
 
+function isAdditional(item) {
+  return item.tag === "Additional Ideas";
+}
+
 function activationCard(item, expanded = false) {
   return `
     <article class="activation-card" data-category="${item.category}">
@@ -95,7 +99,7 @@ function initHome() {
   const featured = document.querySelector("#home-featured");
   const work = document.querySelector("#home-work");
   if (featured) {
-    featured.innerHTML = activations.slice(0, 6).map((item) => activationCard(item)).join("");
+    featured.innerHTML = activations.filter((item) => !isAdditional(item)).slice(0, 6).map((item) => activationCard(item)).join("");
   }
   if (work) {
     work.innerHTML = workItems.slice(0, 3).map((item) => workCard(item, false)).join("");
@@ -103,27 +107,53 @@ function initHome() {
 }
 
 function initActivations() {
-  const grid = document.querySelector("#activation-grid");
+  const primaryGrid = document.querySelector("#primary-activation-grid");
+  const additionalGrid = document.querySelector("#additional-activation-grid");
   const summary = document.querySelector("#category-summary");
   const tabs = document.querySelectorAll(".tab");
-  if (!grid) return;
+  if (!primaryGrid || !additionalGrid) return;
+
+  const primaryActivations = activations
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => !isAdditional(item));
+  const additionalActivations = activations
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => isAdditional(item));
 
   if (summary) {
-    summary.innerHTML = categories.map((category) => `
+    summary.innerHTML = categories.map((category) => {
+      const primaryCount = primaryActivations.filter(({ item }) => item.category === category.id).length;
+      const additionalCount = additionalActivations.filter(({ item }) => item.category === category.id).length;
+      return `
       <article>
-        <strong>${activations.filter((item) => item.category === category.id).length}</strong>
+        <strong>${primaryCount}</strong>
         <span>${category.name}</span>
+        <small>${additionalCount} additional</small>
         <p>${category.description}</p>
       </article>
-    `).join("");
+    `;
+    }).join("");
   }
 
-  function renderGallery(filter = "all") {
+  function renderGallery(container, source, filter = "all", emptyCopy = "No concepts in this category yet.") {
     const activeCategories = filter === "all" ? categories : categories.filter((category) => category.id === filter);
-    grid.innerHTML = activeCategories.map((category) => {
-      const categoryActivations = activations
-        .map((item, index) => ({ item, index }))
-        .filter(({ item }) => item.category === category.id);
+    const sections = activeCategories.map((category) => {
+      const categoryActivations = source.filter(({ item }) => item.category === category.id);
+      if (!categoryActivations.length && filter === "all") return "";
+      if (!categoryActivations.length) {
+        return `
+          <section class="category-section is-empty" data-category="${category.id}">
+            <div class="category-heading">
+              <div>
+                <p class="eyebrow">0 concepts</p>
+                <h2>${category.name}</h2>
+                <p>${category.description}</p>
+              </div>
+            </div>
+            <article class="empty-category-note">${emptyCopy}</article>
+          </section>
+        `;
+      }
       return `
         <section class="category-section" data-category="${category.id}">
           <div class="category-heading">
@@ -139,25 +169,34 @@ function initActivations() {
         </section>
       `;
     }).join("");
+
+    container.innerHTML = sections || `<article class="empty-category-note">${emptyCopy}</article>`;
   }
 
-  renderGallery();
+  function renderAll(filter = "all") {
+    renderGallery(primaryGrid, primaryActivations, filter, "This category only has additional concepts right now.");
+    renderGallery(additionalGrid, additionalActivations, filter, "No additional concepts are currently parked in this category.");
+  }
+
+  renderAll();
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       tabs.forEach((item) => item.classList.remove("active"));
       tab.classList.add("active");
-      renderGallery(tab.dataset.filter);
+      renderAll(tab.dataset.filter);
     });
   });
 
   const dialog = document.querySelector("#activation-dialog");
-  grid.addEventListener("click", (event) => {
-    const tile = event.target.closest("[data-activation]");
-    if (!tile || !dialog) return;
-    const item = activations[Number(tile.dataset.activation)];
-    dialog.innerHTML = activationModalContent(item);
-    dialog.showModal();
-    dialog.querySelector(".dialog-close")?.addEventListener("click", () => dialog.close());
+  [primaryGrid, additionalGrid].forEach((container) => {
+    container.addEventListener("click", (event) => {
+      const tile = event.target.closest("[data-activation]");
+      if (!tile || !dialog) return;
+      const item = activations[Number(tile.dataset.activation)];
+      dialog.innerHTML = activationModalContent(item);
+      dialog.showModal();
+      dialog.querySelector(".dialog-close")?.addEventListener("click", () => dialog.close());
+    });
   });
   dialog?.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();

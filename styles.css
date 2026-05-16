@@ -130,7 +130,11 @@ p { margin: 0; color: var(--muted); }
 }
 .page-hero h1 { color: #fff; }
 .page-hero p:not(.eyebrow) { max-width: 740px; margin-top: 18px; color: rgba(255, 255, 255, 0.82); font-size: 1.12rem; }
-.red-hero { background: linear-gradient(135deg, #1c1616, #681017 52%, #101010); }
+.red-hero {
+  background:
+    linear-gradient(135deg, rgba(12, 14, 16, 0.96), rgba(104, 16, 23, 0.94) 56%, rgba(10, 10, 10, 0.98)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 88px);
+}
 .blue-hero { background: linear-gradient(135deg, #0d1c22, #006c8c 55%, #101010); }
 .dark-hero { background: linear-gradient(135deg, #151515, #253037 52%, #101010); }
 
@@ -361,9 +365,95 @@ p { margin: 0; color: var(--muted); }
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 0.9;
 }
+.category-summary small {
+  display: inline-flex;
+  width: fit-content;
+  margin: 4px 0 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #006f8d;
+  background: rgba(0, 155, 204, 0.1);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.activation-board {
+  display: grid;
+  gap: 24px;
+}
+.activation-panel {
+  display: grid;
+  gap: 26px;
+  padding: clamp(20px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 55px rgba(21, 31, 37, 0.08);
+}
+.primary-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.86)),
+    linear-gradient(90deg, rgba(206, 16, 32, 0.08), transparent 38%);
+}
+.additional-panel {
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(20, 24, 28, 0.96), rgba(10, 12, 14, 0.98)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 72px);
+}
+.activation-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.activation-section-head h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+.activation-section-head p:not(.eyebrow) {
+  max-width: 720px;
+}
+.activation-section-head > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(206, 16, 32, 0.24);
+  border-radius: 999px;
+  color: var(--red);
+  background: rgba(206, 16, 32, 0.08);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+.additional-panel .activation-section-head {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+.additional-panel h2,
+.additional-panel .category-heading h2 {
+  color: #fff;
+}
+.additional-panel p,
+.additional-panel .category-heading p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+}
+.additional-panel .eyebrow {
+  color: #ff6873;
+}
+.additional-panel .activation-section-head > span {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+}
 .category-gallery-stack {
   display: grid;
   gap: 42px;
+}
+.compact-stack {
+  gap: 30px;
 }
 .category-section {
   display: grid;
@@ -376,6 +466,9 @@ p { margin: 0; color: var(--muted); }
   gap: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
+}
+.additional-panel .category-heading {
+  border-color: rgba(255, 255, 255, 0.16);
 }
 .category-heading h2 {
   font-size: clamp(1.9rem, 4vw, 3.2rem);
@@ -428,6 +521,16 @@ p { margin: 0; color: var(--muted); }
   transition: transform 240ms ease;
 }
 .activation-tile:hover img { transform: scale(1.04); }
+.additional-panel .activation-tile {
+  min-height: 220px;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+}
+.additional-panel .activation-tile::after {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 16%, rgba(0, 0, 0, 0.78) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.32), transparent 48%);
+}
 .tile-title {
   position: relative;
   z-index: 1;
@@ -440,6 +543,19 @@ p { margin: 0; color: var(--muted); }
   font-weight: 950;
   line-height: 0.98;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+.empty-category-note {
+  padding: 18px;
+  border: 1px dashed rgba(21, 21, 21, 0.18);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.68);
+  font-weight: 800;
+}
+.additional-panel .empty-category-note {
+  color: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
 }
 .activation-dialog {
   width: min(1180px, calc(100% - 28px));

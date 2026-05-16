@@ -21,17 +21,17 @@
       <section class="page-hero red-hero">
         <p class="eyebrow">Final Recommendations</p>
         <h1>Activation Strategy</h1>
-        <p>Explore the full recommendation set by the five final activation categories. Each tile opens into a clean concept view with the full visual and partner lockup.</p>
+        <p>Explore the executive recommendation set first, then review the additional idea pipeline separately. Each concept stays organized by the five activation categories.</p>
       </section>
       <section class="section strategy-frame">
         <div>
           <p class="eyebrow">Recommendation System</p>
-          <h2>Five categories, one interactive idea library.</h2>
-          <p>The page is built for quick executive scanning first, with title-only concept tiles that can expand into a cleaner visual review view.</p>
+          <h2>Primary recommendations up front. Additional concepts parked below.</h2>
+          <p>The main gallery now contains the final-presentation concepts plus the two Swinerton extensions. Additional ideas stay visible, but they no longer compete with the polished recommendation set.</p>
         </div>
         <div class="criteria-grid category-summary" id="category-summary"></div>
       </section>
-      <section class="section">
+      <section class="section activation-board">
         <div class="tabs">
           <button class="tab active" type="button" data-filter="all">All</button>
           <button class="tab" type="button" data-filter="in-game">In-Game Rewards</button>
@@ -40,13 +40,34 @@
           <button class="tab" type="button" data-filter="takehome">Tangible Take-homes</button>
           <button class="tab" type="button" data-filter="citywide">Citywide Activations</button>
         </div>
-        <div class="category-gallery-stack" id="activation-grid"></div>
+        <section class="activation-panel primary-panel" aria-labelledby="primary-activation-title">
+          <div class="activation-section-head">
+            <div>
+              <p class="eyebrow">Executive Set</p>
+              <h2 id="primary-activation-title">Main Recommendation Ideas</h2>
+              <p>Final-presentation concepts and the Swinerton extensions, grouped for fast review.</p>
+            </div>
+            <span>Primary</span>
+          </div>
+          <div class="category-gallery-stack" id="primary-activation-grid"></div>
+        </section>
+        <section class="activation-panel additional-panel" aria-labelledby="additional-activation-title">
+          <div class="activation-section-head">
+            <div>
+              <p class="eyebrow">Future Pipeline</p>
+              <h2 id="additional-activation-title">Additional Activation Ideas</h2>
+              <p>Brainstormed and research-backed concepts that can be revisited after the core recommendations.</p>
+            </div>
+            <span>Additional</span>
+          </div>
+          <div class="category-gallery-stack compact-stack" id="additional-activation-grid"></div>
+        </section>
       </section>
       <dialog class="activation-dialog" id="activation-dialog" aria-label="Activation details"></dialog>
     </main>
     <footer class="site-footer">
       <div><img src="assets/brand/gscg-logo.png" alt="GSCG"><strong>GSCG</strong><span>Activation Strategy</span></div>
-      <p>Featured and additional activation ideas are grouped by the five final presentation categories.</p>
+      <p>Main recommendations and additional activation ideas are separated for clearer executive review.</p>
     </footer>
     <script src="data.js"></script>
     <script src="app.js"></script>
