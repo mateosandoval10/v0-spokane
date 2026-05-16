@@ -1,4 +1,4 @@
-const { categories, activations, weeklyDeepDives, workItems, consultants, pitchDecks } = window.GSCG;
+const { categories, activations, weeklyDeepDives, workItems, consultantWork, consultants, pitchDecks } = window.GSCG;
 
 function byCategory(id) {
   return categories.find((category) => category.id === id);
@@ -208,6 +208,50 @@ function workCard(item, detailed = true) {
   `;
 }
 
+function consultantProfile(profile) {
+  const focus = profile.focus.map((point) => `<li>${point}</li>`).join("");
+  const evidence = profile.evidence.map((item) => `<span>${item}</span>`).join("");
+  const weeks = profile.weeks.map((item) => {
+    const points = item.points.map((point) => `<li>${point}</li>`).join("");
+    const metrics = item.metrics?.map((metric) => `<span>${metric}</span>`).join("") || "";
+    return `
+      <article class="consultant-week-card">
+        <img src="${item.preview}" alt="${item.title} preview">
+        <div>
+          <div class="card-meta"><span>${item.week}</span><span>${item.file}</span></div>
+          <h4>${item.title}</h4>
+          <p>${item.achievement}</p>
+          <ul>${points}</ul>
+          ${metrics ? `<div class="evidence-row">${metrics}</div>` : ""}
+        </div>
+      </article>
+    `;
+  }).join("");
+  return `
+    <article class="consultant-profile">
+      <div class="consultant-profile-head">
+        <span class="avatar">${profile.initials}</span>
+        <div>
+          <p class="eyebrow">${profile.role}</p>
+          <h3>${profile.name}</h3>
+          <p>${profile.summary}</p>
+        </div>
+      </div>
+      <div class="consultant-focus">
+        <div>
+          <h4>Primary lens</h4>
+          <ul>${focus}</ul>
+        </div>
+        <div>
+          <h4>Evidence used</h4>
+          <div class="evidence-row">${evidence}</div>
+        </div>
+      </div>
+      <div class="consultant-week-grid">${weeks}</div>
+    </article>
+  `;
+}
+
 function initWork() {
   const weekNav = document.querySelector("#week-nav");
   const weekDetail = document.querySelector("#week-detail");
@@ -235,7 +279,8 @@ function initWork() {
     library.innerHTML = workItems.map((item) => workCard(item, true)).join("");
   }
   if (people) {
-    people.innerHTML = consultants.map((person) => `
+    const detailedProfiles = consultantWork?.map((profile) => consultantProfile(profile)).join("") || "";
+    const comingSoon = consultants.filter((person) => !consultantWork?.some((profile) => profile.name === person.name)).map((person) => `
       <article class="person-card">
         <span class="avatar">${person.initials}</span>
         <h3>${person.name}</h3>
@@ -243,6 +288,7 @@ function initWork() {
         <p>${person.status}</p>
       </article>
     `).join("");
+    people.innerHTML = `${detailedProfiles}${comingSoon ? `<div class="people-grid compact-people">${comingSoon}</div>` : ""}`;
   }
 }
 
